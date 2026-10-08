@@ -214,7 +214,7 @@ in the setup page's "Fixed address (advanced)" or later on the board's Address c
 checks that your router answers from it; if not, it goes back to an automatic address until it
 restarts and says so on its page, so a typo cannot lose it.
 
-**Build the firmware from source**, ESP-IDF v5.4:
+**Build the firmware from source**, ESP-IDF v5.5:
 
 ```sh
 cd firmware && idf.py build
