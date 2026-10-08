@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Firmware builds, one per ESP-IDF version the targets need: the S3 boards on
-# 5.4, the ESP32-P4 board on 5.5. They run without a board and without a UPS.
+# 5.5, the ESP32-P4 board on 5.5. They run without a board and without a UPS.
 #
 # WHAT IS NOT HERE, and why. The project's design checks (power budget, BOM,
 # placement, ERC, DRC, the pin-map lockstep and the rest) live in tools/test/,
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        idf: ['v5.4']
+        idf: ['v5.5']
     container: espressif/idf:${{ matrix.idf }}
     steps:
       - uses: actions/checkout@v4
@@ -50,11 +50,11 @@ jobs:
 
   # The ESP32-P4 board: a different chip, so a different ESP-IDF and its own
   # build directory, sdkconfig and dependency lock (the tracked
-  # dependencies.lock belongs to the 5.4 builds).
+  # dependencies.lock belongs to the 5.5 builds).
   firmware-p4poe:
-    name: firmware build, P4-PoE (ESP-IDF v5.5.5)
+    name: firmware build, P4-PoE (ESP-IDF v5.5)
     runs-on: ubuntu-latest
-    container: espressif/idf:v5.5.5
+    container: espressif/idf:v5.5
     steps:
       - uses: actions/checkout@v4
       - name: let git read the checkout
