@@ -8,10 +8,10 @@ down, because rediscovering it costs an afternoon.
 
 ## Firmware
 
-**ESP-IDF v5.4**, installed to `~/esp/esp-idf`:
+**ESP-IDF v5.5**, installed to `~/esp/esp-idf`:
 
 ```sh
-git clone --branch release/v5.4 --depth 1 --recursive --shallow-submodules \
+git clone --branch release/v5.5 --depth 1 --recursive --shallow-submodules \
  https://github.com/espressif/esp-idf.git ~/esp/esp-idf
 ~/esp/esp-idf/install.sh esp32s3
 ~/esp/esp-idf/export.sh # every shell, before idf.py
